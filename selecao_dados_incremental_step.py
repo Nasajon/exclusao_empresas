@@ -87,7 +87,7 @@ class SelecaoDadosIncrementalStep(Step):
 
         # Fazendo a consulta no BD
         sql = """
-        select empresa as id from ns.empresas as e where e.codigo in (:codigos_empresas)
+        select empresa as id from ns.empresas as e where e.codigo in :codigos_empresas
         """
 
         ids = self.db_adapter.execute_query(
