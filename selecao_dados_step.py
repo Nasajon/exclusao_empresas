@@ -15,11 +15,12 @@ class Vertice:
     pk: str
     dependecia: str
     dependencias: List[Dict[str, Any]]
+    pular: bool
 
     # Dicionário: key=chave vizinho; value=fk_column
     arestas: Dict[str, str]
 
-    def __init__(self, id: str, schema: str, table: str, pk: str) -> None:
+    def __init__(self, id: str, schema: str, table: str, pk: str, pular: bool) -> None:
         self.id = id
         self.schema = schema
         self.table = table
@@ -27,6 +28,7 @@ class Vertice:
         self.arestas = {}
         self.dependecia = None
         self.dependencias = []
+        self.pular = pular
 
 
 class Grafo:
@@ -118,7 +120,7 @@ class SelecaoDadosStep(Step):
             id = '{}.{}'.format(
                 entidade['schema_name'], entidade['table_name'])
             v = Vertice(id, entidade['schema_name'],
-                        entidade['table_name'], entidade['pk_name'])
+                        entidade['table_name'], entidade['pk_name'], entidade['pular'])
             grafo.vertices[id] = v
 
     def list_entidades_dependencias(self, grafo: Grafo):
@@ -171,6 +173,10 @@ class SelecaoDadosStep(Step):
 
         for vertice in ordem:
             self.log(f'Entidade {vertice.schema}.{vertice.table}')
+
+            if vertice.pular:
+                self.log(f'Pulando...')
+                continue
 
             for dependencia in vertice.dependencias:
                 id_origem_fk = '{}.{}'.format(
