@@ -46,7 +46,13 @@ INSERT INTO exclusao.entidades
 VALUES('contabil', 'classificacaocontas', 'classificacaoconta', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('contabil', 'conciliacao', 'conciliacao', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('contabil', 'configuracoescontasbens', 'configuracaocontabem', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('contabil', 'configuracoesfluxodecaixa', 'configuracaofluxodecaixa', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('contabil', 'configuracoestextos', 'configuracaotexto', false, false);
@@ -100,6 +106,9 @@ INSERT INTO exclusao.entidades
 VALUES('contabil', 'lalurcalculos', 'lalurapuracao', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('contabil', 'lalurparteacontasrelacionadas', 'lalurparteacontarelacionada', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('contabil', 'lalurpartealancamentos', 'lalurpartealancamento', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
@@ -110,6 +119,9 @@ VALUES('contabil', 'lalurparteblancamentos', 'lalurparteblancamento', false, fal
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('contabil', 'lancamentos', 'lancamento', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('contabil', 'lancamentosabertos', 'lancamentoaberto', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('contabil', 'lancamentosbloqueios', 'lancamentobloqueio', false, false);
@@ -125,6 +137,9 @@ VALUES('contabil', 'lotes', 'lote', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('contabil', 'loteslancamentos', 'lancamento', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('contabil', 'loteslancamentosabertos', 'lotelancamentoaberto', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('contabil', 'loteslancamentosnumeros', 'lotelancamentonumero', false, false);
@@ -433,6 +448,9 @@ INSERT INTO exclusao.entidades
 VALUES('ns', 'estabelecimentosconjuntos', 'estabelecimentoconjunto', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('ns', 'fechamentos', 'fechamento', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('ns', 'feriados', 'feriado', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
@@ -466,6 +484,9 @@ INSERT INTO exclusao.entidades
 VALUES('persona', 'acordosdeprorrogacoes', 'acordodeprorrogacao', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('persona', 'acordosdeprorrogacoesfaixas', 'acordodeprorrogacaofaixa', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'acordosmp9362020', 'acordomp9362020', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
@@ -482,6 +503,9 @@ VALUES('persona', 'agentescausadorescatstrabalhadores', 'agentecausadorcattrabal
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'ambientes', 'ambiente', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('persona', 'aquisicaoproducao', 'aquisicaoproducao', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'asostrabalhadores', 'asotrabalhador', false, false);
@@ -670,6 +694,9 @@ INSERT INTO exclusao.entidades
 VALUES('persona', 'planossaude', 'planosaude', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('persona', 'planossaudedependentestrabalhadores', 'planosaudedependentetrabalhador', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'planossauderubricas', 'planosauderubrica', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
@@ -677,6 +704,9 @@ VALUES('persona', 'planossaudetrabalhadores', 'planosaudetrabalhador', false, fa
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'processos', 'processo', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('persona', 'processoslotacoes', 'processolotacao', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'processosrubricas', 'processorubrica', false, false);
@@ -740,6 +770,9 @@ VALUES('persona', 'tiposfuncionarios', 'tipofuncionario', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'trabalhadores', 'trabalhador', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('persona', 'treinamentoscapacitacoestrabalhadores', 'treinamentocapacitacaotrabalhador', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'valestransportespersonalizadostrabalhadores', 'valetransportepersonalizadotrabalhador', false, false);
@@ -866,6 +899,12 @@ VALUES('scritta', 'grec_icms_iss', 'id', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('scritta', 'grec_resumo', 'id', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('scritta', 'imovel_contrato', 'id', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('scritta', 'imovel_empreendimento', 'id', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('scritta', 'inv_contas', 'id', false, false);
@@ -1159,6 +1198,9 @@ INSERT INTO exclusao.entidades_dependencias
 VALUES('contabil', 'conciliacao', 'contabil', 'contas', 'conta');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'conciliacao', 'contabil', 'contas', 'conta');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'conciliacoescomentarios', 'contabil', 'lancamentos', 'lancamento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
@@ -1195,7 +1237,13 @@ INSERT INTO exclusao.entidades_dependencias
 VALUES('contabil', 'configuracoesfluxodecaixa', 'contabil', 'contas', 'conta');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'configuracoesfluxodecaixa', 'contabil', 'contas', 'conta');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'configuracoesfluxodecaixa', 'contabil', 'contas', 'contrapartida');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'configuracoesfluxodecaixa', 'ns', 'estabelecimentos', 'estabelecimento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'configuracoesfluxodecaixa', 'ns', 'estabelecimentos', 'estabelecimento');
@@ -1351,6 +1399,9 @@ INSERT INTO exclusao.entidades_dependencias
 VALUES('contabil', 'identificacoesrelacionamentos', 'ns', 'pessoas', 'pessoa');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'itemconciliacaolancamento', 'contabil', 'conciliacao', 'conciliacao');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'itemconciliacaolancamento', 'contabil', 'lancamentos', 'lancamento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
@@ -1364,6 +1415,12 @@ VALUES('contabil', 'lalurparteacontasrelacionadas', 'contabil', 'centrosdecustoa
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'lalurparteacontasrelacionadas', 'contabil', 'contasanuais', 'conta');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'lalurparteacontasrelacionadas', 'contabil', 'contasanuais', 'conta');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'lalurparteacontasrelacionadas', 'contabil', 'lalurpartealancamentos', 'lalurpartealancamento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'lalurparteacontasrelacionadas', 'contabil', 'lalurpartealancamentos', 'lalurpartealancamento');
@@ -1426,6 +1483,9 @@ INSERT INTO exclusao.entidades_dependencias
 VALUES('contabil', 'lancamentosabertos', 'ns', 'estabelecimentos', 'estabelecimento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'lancamentosabertos', 'ns', 'estabelecimentos', 'estabelecimento');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'lancamentosbloqueios', 'contabil', 'contasanuais', 'conta');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
@@ -1481,6 +1541,12 @@ VALUES('contabil', 'loteslancamentos', 'ns', 'pessoas', 'pessoa');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'loteslancamentosabertos', 'contabil', 'lotes', 'lote');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'loteslancamentosabertos', 'contabil', 'lotes', 'lote');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('contabil', 'loteslancamentosabertos', 'ns', 'estabelecimentos', 'estabelecimento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('contabil', 'loteslancamentosabertos', 'ns', 'estabelecimentos', 'estabelecimento');
@@ -4045,6 +4111,9 @@ INSERT INTO exclusao.entidades_dependencias
 VALUES('ns', 'fechamentos', 'ns', 'estabelecimentos', 'estabelecimento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('ns', 'fechamentos', 'ns', 'estabelecimentos', 'estabelecimento');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('ns', 'feriados', 'ns', 'estabelecimentos', 'estabelecimento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
@@ -4405,6 +4474,9 @@ INSERT INTO exclusao.entidades_dependencias
 VALUES('persona', 'acordosdeprorrogacoesfaixas', 'persona', 'acordosdeprorrogacoes', 'acordodeprorrogacao');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'acordosdeprorrogacoesfaixas', 'persona', 'acordosdeprorrogacoes', 'acordodeprorrogacao');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'acordosmp9362020', 'ns', 'empresas', 'empresa');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
@@ -4472,6 +4544,9 @@ VALUES('persona', 'apontamentos', 'ns', 'estabelecimentos', 'estabelecimento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'apontamentostrabalhadores', 'persona', 'trabalhadores', 'trabalhador');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'aquisicaoproducao', 'ns', 'estabelecimentos', 'estabelecimento');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'aquisicaoproducao', 'ns', 'estabelecimentos', 'estabelecimento');
@@ -5143,10 +5218,19 @@ INSERT INTO exclusao.entidades_dependencias
 VALUES('persona', 'pendenciaspagamentos', 'persona', 'trabalhadores', 'trabalhador');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'planosaudedependentesvaloresmensais', 'persona', 'planossaudedependentestrabalhadores', 'planosaudedependentetrabalhador');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'planossaude', 'ns', 'empresas', 'empresa');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'planossaudedependentestrabalhadores', 'persona', 'dependentestrabalhadores', 'dependentetrabalhador');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'planossaudedependentestrabalhadores', 'persona', 'dependentestrabalhadores', 'dependentetrabalhador');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'planossaudedependentestrabalhadores', 'persona', 'planossaudetrabalhadores', 'planosaudetrabalhador');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'planossaudedependentestrabalhadores', 'persona', 'planossaudetrabalhadores', 'planosaudetrabalhador');
@@ -5201,6 +5285,12 @@ VALUES('persona', 'processoscodigosterceiros', 'persona', 'processos', 'processo
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'processoslotacoes', 'persona', 'lotacoes', 'lotacao');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'processoslotacoes', 'persona', 'lotacoes', 'lotacao');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'processoslotacoes', 'persona', 'processos', 'processo');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'processoslotacoes', 'persona', 'processos', 'processo');
@@ -5465,6 +5555,12 @@ VALUES('persona', 'transacoescalculostrabalhadoressemcalculos', 'persona', 'trab
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'treinamentoscapacitacoestrabalhadores', 'persona', 'trabalhadores', 'trabalhador');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'treinamentoscapacitacoestrabalhadores', 'persona', 'trabalhadores', 'trabalhador');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'treinamentoscapacitacoestrabalhadoresdetalhes', 'persona', 'treinamentoscapacitacoestrabalhadores', 'treinamentocapacitacaotrabalhador');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'treinamentoscapacitacoestrabalhadoresdetalhesprofissionais', 'persona', 'trabalhadores', 'trabalhador');
@@ -5929,13 +6025,28 @@ INSERT INTO exclusao.entidades_dependencias
 VALUES('scritta', 'imovel_contrato', 'ns', 'empresas', 'id_empresa');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('scritta', 'imovel_contrato', 'ns', 'empresas', 'id_empresa');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('scritta', 'imovel_contrato', 'ns', 'pessoas', 'id_pessoa');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('scritta', 'imovel_contrato', 'ns', 'pessoas', 'id_proprietario');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('scritta', 'imovel_contrato', 'scritta', 'imovel_empreendimento', 'id_empreendimento');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('scritta', 'imovel_empreendimento', 'ns', 'empresas', 'id_empresa');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('scritta', 'imovel_empreendimento', 'ns', 'empresas', 'id_empresa');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('scritta', 'imovel_movimento', 'scritta', 'imovel_contrato', 'id_contrato');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('scritta', 'imovel_reajuste', 'scritta', 'imovel_contrato', 'id_contrato');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('scritta', 'inv_contas', 'ns', 'estabelecimentos', 'id_estabelecimento');
