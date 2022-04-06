@@ -155,8 +155,8 @@ class SelecaoDadosIncrementalStep(Step):
         # Inserindo as empresas na tabela para exclusao
         for emp in empresas:
             sql = """
-            insert into exclusao.ns (table_name, id)
-            select 'empresas', :id where not exists (
+            insert into exclusao.ns (table_name, id, excluido)
+            select 'empresas', :id, false where not exists (
                 select 1 from exclusao.ns where table_name='empresas' and id=:id
             )
             """
@@ -213,9 +213,9 @@ class SelecaoDadosIncrementalStep(Step):
                     # """
 
                     sql = f"""
-                    insert into exclusao.{vertice_aresta.schema} (table_name, id)
+                    insert into exclusao.{vertice_aresta.schema} (table_name, id, excluido)
                     select
-                        distinct '{vertice_aresta.table}', tv.{vertice_aresta.pk}
+                        distinct '{vertice_aresta.table}', tv.{vertice_aresta.pk}, false
                     from
                         {vertice_aresta.schema}.{vertice_aresta.table} as tv
                         join exclusao.{vertice.schema} as te on (
