@@ -775,6 +775,9 @@ INSERT INTO exclusao.entidades
 VALUES('persona', 'treinamentoscapacitacoestrabalhadores', 'treinamentocapacitacaotrabalhador', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
+VALUES('persona', 'treinamentoscapacitacoestrabalhadoresdetalhes', 'treinamentocapacitacaotrabalhadordetalhe', false, false);
+INSERT INTO exclusao.entidades
+(schema_name, table_name, pk_name, apenas_modo_contabil, pular)
 VALUES('persona', 'valestransportespersonalizadostrabalhadores', 'valetransportepersonalizadotrabalhador', false, false);
 INSERT INTO exclusao.entidades
 (schema_name, table_name, pk_name, apenas_modo_contabil, pular)
@@ -5564,6 +5567,12 @@ VALUES('persona', 'treinamentoscapacitacoestrabalhadoresdetalhes', 'persona', 't
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'treinamentoscapacitacoestrabalhadoresdetalhesprofissionais', 'persona', 'trabalhadores', 'trabalhador');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'treinamentoscapacitacoestrabalhadoresdetalhesprofissionais', 'persona', 'treinamentoscapacitacoestrabalhadoresdetalhes', 'treinamentocapacitacaotrabalhadordetalhe');
+INSERT INTO exclusao.entidades_dependencias
+(schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
+VALUES('persona', 'treinamentoscapacitacoestrabalhadoresdetalhesresponsaveis', 'persona', 'treinamentoscapacitacoestrabalhadoresdetalhes', 'iddetalhe');
 INSERT INTO exclusao.entidades_dependencias
 (schema_name_origem, table_name_origem, schema_name_destino, table_name_destino, fk_column)
 VALUES('persona', 'tributacoesexclusivastrabalhadores', 'persona', 'trabalhadores', 'trabalhador');
